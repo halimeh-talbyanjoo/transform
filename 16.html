@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        main{
+            width: 100%;
+            height:300vh;
+            /* margin: auto 5%; */
+        }
+        nav{
+            width: 100%;
+            height: 55px;
+            /* border: 1px solid blue; */
+            display: flex;
+            margin-top:15px ;
+
+        }
+        nav>*{
+            /* border: 1px solid red; */
+        }
+
+        nav>div:nth-of-type(1){
+            display: flex;
+            height:100%;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+
+           
+        }
+        .heart{
+            width: 20px;
+            height: 20px;
+            /* border: 1px solid red; */
+            position: relative;
+            transform-style: preserve-3d;
+            transition: 10s;
+            color: darkorange;
+            background-image: linear-gradient(45deg,darkorange,rgb(99, 59, 10),darkorange);
+            animation: heart 1s linear infinite alternate;
+        }
+        @keyframes heart{
+            to{
+                transform: rotate3d(1,1,1,360deg);
+            } 
+        }
+       .heart>div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 255, 255, 0.637);
+            /* border-radius: 30%; */
+        }
+        .heart>div:nth-of-type(1){
+            transform: translatez(-10px);
+            background-image: url(img/7188636_love_heart_favorite_social_expression_icon.png);
+            background-size: cover;
+
+        }
+        .heart>div:nth-of-type(2){
+            transform: translatez(10px);
+            background-image: url(img/7188636_love_heart_favorite_social_expression_icon.png);
+            background-size: cover;
+        }
+        .heart>div:nth-of-type(3){
+            transform-origin: top;
+            transform: rotateX(-90deg) translatey(-10px);
+            background-image: url(img/7188636_love_heart_favorite_social_expression_icon.png);
+            background-size: cover;
+        }
+        .heart>div:nth-of-type(4){
+            transform-origin: bottom;
+            transform: rotatex(-90deg)  translatey(10px);
+            background-image: url(img/7188636_love_heart_favorite_social_expression_icon.png);
+            background-size: cover;
+
+        }
+        .heart>div:nth-of-type(5){
+            transform-origin: left;
+            transform: rotatey(-90deg)  translatex(-10px);
+            background-image: url(img/7188636_love_heart_favorite_social_expression_icon.png);
+            background-size: cover;        }
+        .heart>div:nth-of-type(6){
+            transform-origin: right;
+            transform: rotatey(90deg)  translatex(10px);
+            background-image: url(img/7188636_love_heart_favorite_social_expression_icon.png);
+            background-size: cover;        }
+            nav>div:nth-of-type(2){
+                width: 50%;
+            }
+            nav>div:nth-of-type(2)>ul{
+                width:100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            nav>div:nth-of-type(2)>ul>li{
+                list-style-type: none;
+                height: 100%;
+                width:100%;
+            }
+            nav>div:nth-of-type(2)>ul>li>a{
+            text-decoration: none;
+            display: flex;
+            width:70%;
+            height: 80%;
+            align-items: center;
+            transition: 0.5s;
+            }
+            nav>div:nth-of-type(2)>ul>li>a:hover{
+                box-shadow: 3px 3px 1px 0 black;
+                transform: translate(-8px , -8px);
+            }
+            nav>div:nth-of-type(3){
+                width: 25%;
+                background-color: #F2292F;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+            }
+            nav>div:nth-of-type(3)>button{
+                height: 40px;
+                width: 100px;
+                border: none;
+                margin-left: 15px;
+                background-color: white;
+            }
+            header{
+                width: 100%;
+                height: 92vh;
+                display: flex;
+            }
+            header>section:nth-of-type(1){
+                width: 55%;
+                height: 100%;
+            }
+            header>section:nth-of-type(1)>h1{
+                font-size: 190px;
+                font-family: 'Times New Roman', Times, serif;
+                margin-left: 25%;
+                margin-bottom: 15px;
+            }
+            header>section:nth-of-type(1)>p{
+                font-size: 20px;
+                width: 350px;
+                font-family: 'Times New Roman', Times, serif;
+                margin-left: 25%;
+            }
+            header>section:nth-of-type(1)>h2{
+                font-size: 200px;
+                font-family: 'Times New Roman', Times, serif;
+                color: #F2292F;
+                transform: translate(70%,-55%);
+            }
+            header>section:nth-of-type(1)>button{
+                width: 150px;
+                font-size: 25px;
+                height: 50px;
+                background-color: #F2292F;
+                color: wheat;
+                border: none;
+                box-shadow: 8px 8px 0 0px rgb(0, 0, 0);
+                margin-left: 25%;
+                transform: translatey(-350%);
+                cursor: pointer;
+                transition: 0.4s;
+            }
+            header>section:nth-of-type(1)>button:active{
+                box-shadow:none;
+                transform:translate(10px, -250%) ;
+            }
+            header>section:nth-of-type(1)>h3:nth-of-type(1){
+                display: inline-block;
+                font-size: 150px;
+                font-family:'Calibri';
+                color: white;
+                text-shadow: 10px 10px 1px black;
+                transform: rotate(-90deg) translatex(220%) translateY(-180%);
+            }
+            header>section:nth-of-type(1)>h3:nth-of-type(2){
+                display: inline-block;
+                color: white;
+                text-shadow: 3px 3px 1px #F2292F;
+                font-size: 150px;
+                font-family:'Calibri';
+                transform: rotate(-90deg) translatex(320%) translateY(-270%);
+            }
+            header>section:nth-of-type(2){
+                height: 100%;
+                display: flex;
+                width: 45%;
+            }
+            header>section:nth-of-type(2)>figure{
+                width: 44.50%;
+            }
+            header>section:nth-of-type(2)>div{
+                width: 55.50%;
+                height: 100%;
+                background-color: #F2292F;
+                z-index: -1;
+            }
+            aside{
+                width: 100%;
+                height: 110vh;
+                /* border:1px solid red ; */
+                margin-top: 50px;
+            }
+            aside>section{
+                width: 100%;
+                /* border: 1px solid blue; */
+                text-align: center;
+            }
+            aside>section>h2{
+                font-size: 25px;
+            }
+            aside>section>p{
+                font-size: 18px;
+            }
+            aside>div{
+                width: 100%;
+                height: 80%;
+                /* border: 1px solid yellow; */
+                display: flex;
+            }
+            aside>div>section:nth-of-type(1){
+                width: 45%;
+                height: 100%;
+                /* border: 1px solid red; */
+                background-image: url(img/4.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items:center ;
+                background-position:right;
+                box-shadow: 5px 0 2px  #F2292F;
+                transition: 3s;
+            }
+            aside>div>section:nth-of-type(1):hover{
+                box-shadow: none;
+                transform: rotate(-2deg) translate(10px,10px);
+                background-size: cover;  
+
+            }
+                            
+
+            aside>div>section:nth-of-type(2){
+                width: 5%;
+                /* border: 1px solid red; */
+                height: 100%;
+                text-align: center;
+                
+            }
+            aside>div>section:nth-of-type(1)>h5{
+                display: inline-block;
+                font-size: 30px;
+                transform: rotate(90deg)  translatey(-315px);
+                /* border: 1px solid red; */
+                width: 100%;
+                text-align: center;
+
+
+            }
+            aside>div>section:nth-of-type(3){
+                width: 50%;
+                height: 100%;
+                /* border: 1px solid red; */
+            }
+            aside>div>section:nth-of-type(3)>article:nth-of-type(1){
+                width: 80%;
+                height: 50%;
+                /* border: 1px solid blue; */
+
+            }
+            aside>div>section:nth-of-type(3)>article:nth-of-type(1)>img{
+                width: 90%;
+                height: 100%;
+            }
+            aside>div>section:nth-of-type(3)>article:nth-of-type(2){
+                width: 80%;
+                text-align: center;
+                /* border: 1px solid blue; */
+                height: 10%;
+            }
+            aside>div>section:nth-of-type(3)>article:nth-of-type(3){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                height: 40%;
+                /* border: 1px solid blue; */
+            }
+            aside>div>section:nth-of-type(3)>article:nth-of-type(3)>div:nth-of-type(1){
+                width: 60%;
+                /* border: 1px solid blue; */
+                height: 100%;
+                
+
+            }
+            aside>div>section:nth-of-type(3)>article:nth-of-type(3)>div:nth-of-type(1)>figure{
+                width: 100%;
+                /* border: 1px solid blue; */
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+            aside>div>section:nth-of-type(3)>article:nth-of-type(3)>div>figure>img{
+                width: 100%;
+                /* height: 100%; */
+            }
+            aside>div>section:nth-of-type(3)>article:nth-of-type(3)>div:nth-of-type(2){
+                width: 40%;
+                /* border: 1px solid blue; */
+                height: 100%;
+            }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- ..............nav............... -->
+        <nav>
+            <div>
+                <section class="heart">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
+                <h2> &nbsp;&nbsp; Fasion</h2>
+            </div>
+            <div>
+                <ul>
+                    <li><a href=""> SHOP</a></li>
+                    <li><a href=""> ABUTE US</a></li>
+                    <li><a href=""> BING</a></li>
+                    <li><a href=""> CONTECT</a></li>
+
+                </ul>
+            </div>
+            <div>
+                <button>
+                    SING IN
+                </button>
+            </div>
+        </nav>
+        <!-- .......................header.................. -->
+        <header>
+            <section>
+                <h1>
+                    FASHI
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, consectetur adipisicing elit. Cum, distinctio.
+                </p>
+                <h2>ON</h2>
+                <button>click me!</button>
+                <h3>20</h3>
+                <h3>22</h3>
+            </section>
+            <section>
+                <figure>
+                    <img src="img/33.gif" alt="">
+                </figure>
+                <div></div>
+            </section>
+        </header>
+        <!-- ................. asid............... -->
+        <aside>
+            <section>
+                <h2>ــــــــــــــــــــــــــــCallication and Style for Everyoneــــــــــــــــــــــــــــ</h2>
+                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, sequi? <br>
+                Lorem ipsum dolor sit amet consectetur.
+                </p>
+            </section>
+            <div>
+            <section>
+                <h5>Fashion Style Inspiration
+                </h5>
+            </section>
+            <section>
+            </section>
+            <section>
+                <article>
+                    <img src="img/22.png" alt="">
+                </article>
+                <article>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
+                        Lorem ipsum dolor sit amet.
+                        </p>
+                </article>
+                <article>
+                    <div>
+                        <figure>
+                            <img src="img/19.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div>
+                        <h2>
+                            Love
+    ing
+                        </h4>
+                        <button>  Click mi!</button>
+                    </div>
+                </article>
+            </section>
+            <section></section>
+            <section></section>
+            <section></section>
+            <section></section>
+            </div>
+            
+        </aside>
+
+    </main>
+</body>
+</html>
+.
